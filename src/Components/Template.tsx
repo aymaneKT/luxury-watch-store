@@ -2,7 +2,7 @@ import icon from "../Images/wristwatch.png";
 
 type templatePrope = {
   image: string;
-  text: string;
+  title: string;
   description: string;
   imageInLeft: boolean;
 };
@@ -25,8 +25,8 @@ export default function Template(props: templatePrope) {
           <img src={icon} className="w-[55px] h-[55px] select-none" />
           <div className="bg-black h-[1px] w-[200px] rotate-90 "></div>
         </div>
-        <div className="text-center font-[Assistant] mb-[80px]">
-          <h1 className="text-[50px] font-[700]"> {props.text} </h1>
+        <div className="text-center font-[Assistant] mb-[60px]">
+          <h1 className="text-[50px] font-[700]"> {props.title} </h1>
           <p className="font-[500] px-[5rem]">{props.description}</p>
         </div>
       </div>
