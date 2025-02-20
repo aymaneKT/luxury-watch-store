@@ -15,7 +15,7 @@ export default function Models(props: modelsProps) {
           <img
             key={item.image}
             src={item.image}
-            className="bg-[#F3F3F3] hover:opacity-50 transition duration-300 cursor-pointer object-cover"
+            className="bg-[#F3F3F3] hover:opacity-50 transition duration-300  cursor-pointer object-cover mix-blend-multiply"
           />
         ))}
     </div>

@@ -6,7 +6,7 @@ export default function HeroSection() {
       style={{
         backgroundImage: `url(${img})`,
         backgroundSize: "cover",
-        backgroundPosition:"bottom 50px"
+        backgroundPosition:"center center"
       }}
     >
       <h1 className="absolute select-none left-6/12 top-6/12 transform text-8xl -translate-x-1/2 -translate-y-1/2 text-amber-50 font-[Assistant]">

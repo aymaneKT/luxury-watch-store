@@ -18,6 +18,7 @@ import blueIwc from "./Images/blueIwcPilot's Watch.webp";
 import brownIwc from "./Images/BrownIwc.webp";
 import iwcCronoEdition from "./Images/IWCCronograph.webp";
 import IWCWatchMarkXX from "./Images/IWCWatchMarkXX.webp";
+import Footer from "./Components/Footer";
 const Watches = [
   { image: moon, type: "Dress Watch" },
   { image: masterThin, type: "Dress Watch" },
@@ -62,6 +63,7 @@ function App() {
         imageInLeft
       />
       <Models watches={Watches} type="Pilot Watch" />
+      <Footer/>
     </>
   );
 }
