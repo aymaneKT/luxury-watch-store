@@ -3,7 +3,7 @@ import Header from "./Components/Header";
 import HeroSection from "./Components/HeroSection";
 import Models from "./Components/Models";
 import Template from "./Components/Template";
-import img from "./Images/jaeger-LeCoultre Master Ultra Thin.jpg";
+import img from "./Images/jaeger-LeCoultre Master Ultra Thin.png";
 import moon from "./Images/Moon.webp";
 import masterThin from "./Images/Master Ultra Thin.webp";
 import masterThinsSecond from "./Images/Master Ultra Thin Small Seconds.webp";
@@ -31,7 +31,7 @@ const Watches = [
   { image: blueIwc, type: "Pilot Watch" },
   { image: brownIwc, type: "Pilot Watch" },
   { image: iwcCronoEdition, type: "Pilot Watch" },
-  {image:IWCWatchMarkXX , type:"Pilot Watch"}
+  { image: IWCWatchMarkXX, type: "Pilot Watch" },
 ];
 
 function App() {
@@ -63,7 +63,7 @@ function App() {
         imageInLeft
       />
       <Models watches={Watches} type="Pilot Watch" />
-      <Footer/>
+      <Footer />
     </>
   );
 }
