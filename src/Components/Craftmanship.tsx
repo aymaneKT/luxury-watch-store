@@ -1,19 +1,15 @@
-import Header from "./Header";
 import img from "../Images/Craftmanship Image.webp";
-import Footer from "./Footer";
+
 export default function Craftmanship() {
   return (
     <>
       <div
-        
         style={{
           background: "linear-gradient(90deg, #696666 50%, #B0ADAD 50%)",
         }}
       >
-        <Header />
-
         <div className="flex flex-col items-center w-[70%] m-auto py-12">
-          <img src={img} className="w-full my-5" />
+          <img src={img} className="w-full my-5 rounded-[7px] mt-[5rem]" />
           <div className="flex flex-col gap-7 text-justify p-3 font-[Italiana] font-[700] text-white">
             <span>
               This store pushes the boundaries of excellence, crafting each
@@ -42,7 +38,6 @@ export default function Craftmanship() {
           </div>
         </div>
       </div>
-
     </>
   );
 }
