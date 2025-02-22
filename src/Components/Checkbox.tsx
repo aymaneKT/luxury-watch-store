@@ -1,3 +1,4 @@
+import { useLocation } from "react-router";
 import styled from "styled-components";
 
 type typeProps = {
@@ -6,10 +7,13 @@ type typeProps = {
 };
 
 const Checkbox = ({ isOpenListMenu, setIsopenListMenu }: typeProps) => {
+
+  const location = useLocation();
   return (
     <StyledWrapper
       isOpenListMenu={isOpenListMenu}
       className="hidden max-[989px]:block  "
+      location={location}
     >
       <label className="hamburger">
         <input
@@ -32,7 +36,7 @@ const Checkbox = ({ isOpenListMenu, setIsopenListMenu }: typeProps) => {
   );
 };
 
-const StyledWrapper = styled.div<{ isOpenListMenu: boolean }>`
+const StyledWrapper = styled.div<{ isOpenListMenu: boolean , location:any }>`
   position: relative;
   z-index: 9999;
 
@@ -51,7 +55,7 @@ const StyledWrapper = styled.div<{ isOpenListMenu: boolean }>`
 
   .line {
     fill: none;
-    stroke: ${({ isOpenListMenu }) => (isOpenListMenu ? "black" : "white")};
+    stroke: ${({ isOpenListMenu }) => (isOpenListMenu || location.pathname === "/craftmanship" ? "black" : "white")};
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;

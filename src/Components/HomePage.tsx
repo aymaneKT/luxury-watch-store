@@ -61,7 +61,7 @@ export default function HomePage() {
         imageInLeft
       />
       <Models watches={Watches} type="Pilot Watch" />
-      <Footer />
+
     </>
   );
 }
