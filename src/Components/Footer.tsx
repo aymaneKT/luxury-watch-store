@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="flex flex-col gap-2.5 py-3.5 border-t-1 max-[500px]:text-[12px]">
+    <div className="flex flex-col gap-2.5 py-3.5 border-t-1 max-[700px]:text-[12px]">
       <ul className="flex justify-center gap-4 font-[Assistant] font-[600] uppercase items-center">
         <li className="cursor-pointer">Shipping & Returns</li>
         <li className="cursor-pointer">CONTACT</li>
