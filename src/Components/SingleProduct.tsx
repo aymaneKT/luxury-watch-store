@@ -55,7 +55,7 @@ export default function SingleProduct() {
             </div>
           </div>
           <button className="cursor-pointer my-6 font-[800] uppercase bg-[#F3F3F3] p-3 border border-black hover:bg-black hover:text-white transition duration-300 max-[748px]:w-[90%] relative left-1/2 -translate-x-1/2 w-[70%]">
-            787.91€ — Buy now
+            {mainProduct.price}€ — Buy now
           </button>
         </div>
       </div>

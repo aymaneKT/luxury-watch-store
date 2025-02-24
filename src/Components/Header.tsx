@@ -11,7 +11,7 @@ export default function Header() {
   
 
   const menuItems = ["Home", "Shop", "About", "Craftmanship", "Cart"];
-  const isDarkText = isOpenListMenu || location.pathname == "/craftmanship" || location.pathname.includes("/Product");
+  const isDarkText = isOpenListMenu || location.pathname.includes("/craftmanship") || location.pathname.includes("/Product") || location.pathname.includes("/shop");
  
   
   return (

@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect } from "react";
+import { createContext, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import moon from "../Images/Moon.webp";
 import masterThin from "../Images/Master Ultra Thin.webp";
@@ -19,16 +19,9 @@ type watches = {
   type: string;
   specs: string[];
   description: string;
+  price: number;
 }[];
 
-// type watchesProps = {
-//   id: string;
-//   title: string;
-//   image: string;
-//   type: string;
-//   specs: string[];
-//   description: string;
-// }[];
 const Watches: watches = [
   {
     id: uuidv4(),
@@ -44,6 +37,7 @@ const Watches: watches = [
     ],
     description:
       "A dress watch is the epitome of elegance—slim, sophisticated, and designed to complement formal attire.",
+    price: 15000,
   },
   {
     id: uuidv4(),
@@ -59,6 +53,7 @@ const Watches: watches = [
     ],
     description:
       "A dress watch is the epitome of elegance—slim, sophisticated, and designed to complement formal attire.",
+    price: 12000,
   },
   {
     id: uuidv4(),
@@ -74,6 +69,7 @@ const Watches: watches = [
     ],
     description:
       "A dress watch is the epitome of elegance—slim, sophisticated, and designed to complement formal attire.",
+    price: 18000,
   },
   {
     id: uuidv4(),
@@ -89,6 +85,7 @@ const Watches: watches = [
     ],
     description:
       "A dress watch is the epitome of elegance—slim, sophisticated, and designed to complement formal attire.",
+    price: 25000,
   },
   {
     id: uuidv4(),
@@ -104,6 +101,7 @@ const Watches: watches = [
     ],
     description:
       "Built for underwater adventures, a diver’s watch is rugged, water-resistant, and highly legible.",
+    price: 36000,
   },
   {
     id: uuidv4(),
@@ -119,6 +117,7 @@ const Watches: watches = [
     ],
     description:
       "Built for underwater adventures, a diver’s watch is rugged, water-resistant, and highly legible.",
+    price: 14000,
   },
   {
     id: uuidv4(),
@@ -134,6 +133,7 @@ const Watches: watches = [
     ],
     description:
       "Built for underwater adventures, a diver’s watch is rugged, water-resistant, and highly legible.",
+    price: 12000,
   },
   {
     id: uuidv4(),
@@ -149,6 +149,7 @@ const Watches: watches = [
     ],
     description:
       "Built for underwater adventures, a diver’s watch is rugged, water-resistant, and highly legible.",
+    price: 22000,
   },
   {
     id: uuidv4(),
@@ -164,6 +165,7 @@ const Watches: watches = [
     ],
     description:
       "Inspired by aviation, a pilot’s watch features a large, legible dial and practical complications like a GMT or chronograph.",
+    price: 8000,
   },
   {
     id: uuidv4(),
@@ -179,6 +181,7 @@ const Watches: watches = [
     ],
     description:
       "Inspired by aviation, a pilot’s watch features a large, legible dial and practical complications like a GMT or chronograph.",
+    price: 7500,
   },
   {
     id: uuidv4(),
@@ -194,6 +197,7 @@ const Watches: watches = [
     ],
     description:
       "Inspired by aviation, a pilot’s watch features a large, legible dial and practical complications like a GMT or chronograph.",
+    price: 9500,
   },
   {
     id: uuidv4(),
@@ -209,6 +213,7 @@ const Watches: watches = [
     ],
     description:
       "Inspired by aviation, a pilot’s watch features a large, legible dial and practical complications like a GMT or chronograph.",
+    price: 7200,
   },
 ];
 
