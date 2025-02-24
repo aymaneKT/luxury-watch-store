@@ -11,9 +11,11 @@ export default function Header() {
   
 
   const menuItems = ["Home", "Shop", "About", "Craftmanship", "Cart"];
-  const isDarkText = isOpenListMenu || location.pathname === "/craftmanship" ;
+  const isDarkText = isOpenListMenu || location.pathname == "/craftmanship" || location.pathname.includes("/Product");
+ 
+  
   return (
-    <div className="font-[900] py-[30px] px-[65px] text-[#fff] font-[Assistant] tracking-[0.6px] items-center w-[90%] absolute">
+    <div className="font-[900] py-[30px] px-[65px] text-[#fff] font-[Assistant] tracking-[0.6px] items-center w-[90%] absolute top-0">
       <Checkbox
         isOpenListMenu={isOpenListMenu}
         setIsopenListMenu={setIsopenListMenu}
@@ -27,10 +29,7 @@ export default function Header() {
       >
         {/* Prima lista */}
         <ul
-          className="flex gap-[30px]  items-center max-[989px]:flex-col max-[989px]:mt-[4rem]"
-          style={{
-            color: isDarkText ? "black" : "white",
-          }}
+className={`flex gap-[30px] items-center max-[989px]:flex-col max-[989px]:mt-[4rem] ${isDarkText ? "text-black" : "text-white"}`}    
         >
           {menuItems.slice(0, 3).map((item, index) => (
             <li
