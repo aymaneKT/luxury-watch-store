@@ -2,18 +2,21 @@ import { useState } from "react";
 import Checkbox from "./Checkbox";
 import { Link } from "react-router";
 import { useLocation } from "react-router";
+import { useCartContext } from "../Context/CartContext";
 
 export default function Header() {
+  const { cart } = useCartContext();
+  console.log(cart);
+  
   const location = useLocation();
-
-  
   const [isOpenListMenu, setIsopenListMenu] = useState<boolean>(false);
-  
-
   const menuItems = ["Home", "Shop", "About", "Craftmanship", "Cart"];
-  const isDarkText = isOpenListMenu || location.pathname.includes("/craftmanship") || location.pathname.includes("/Product") || location.pathname.includes("/shop");
- 
-  
+  const isDarkText =
+    isOpenListMenu ||
+    location.pathname.includes("/craftmanship") ||
+    location.pathname.includes("/Product") ||
+    location.pathname.includes("/shop");
+
   return (
     <div className="font-[900] py-[30px] px-[65px] text-[#fff] font-[Assistant] tracking-[0.6px] items-center w-[90%] absolute top-0">
       <Checkbox
@@ -29,7 +32,9 @@ export default function Header() {
       >
         {/* Prima lista */}
         <ul
-className={`flex gap-[30px] items-center max-[989px]:flex-col max-[989px]:mt-[4rem] ${isDarkText ? "text-black" : "text-white"}`}    
+          className={`flex gap-[30px] items-center max-[989px]:flex-col max-[989px]:mt-[4rem] ${
+            isDarkText ? "text-black" : "text-white"
+          }`}
         >
           {menuItems.slice(0, 3).map((item, index) => (
             <li
@@ -70,7 +75,7 @@ className={`flex gap-[30px] items-center max-[989px]:flex-col max-[989px]:mt-[4r
           color: isDarkText ? "black" : "white",
         }}
       >
-        2
+        {cart.length}
       </div>
     </div>
   );

@@ -20,6 +20,7 @@ type watches = {
   specs: string[];
   description: string;
   price: number;
+  quantity?: number;
 }[];
 
 const Watches: watches = [
