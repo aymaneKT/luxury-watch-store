@@ -10,12 +10,12 @@ import blueIwc from "../Images/blueIwcPilot's Watch.webp";
 import brownIwc from "../Images/BrownIwc.webp";
 import iwcCronoEdition from "../Images/IWCCronograph.webp";
 import IWCWatchMarkXX from "../Images/IWCWatchMarkXX.webp";
-import moonMasterpiece from "../Images/Moon Masterpiece.png";
-import MasterThinGold from "../Images/Master Thin Gold.png";
-import RolexSubmarinerBlue from "../Images/Rolex Submariner Blue.png";
-import RolexVintageSeaDweller from "../Images/Rolex Sea-Dweller Vintage.png"
-import IWCChronoPilot from "../Images/IWC Chrono Pilot.png";
-import OmegaSeamaster from "../Images/Omega Seamaster.png";
+// import moonMasterpiece from "../Images/Moon Masterpiece.png";
+// import MasterThinGold from "../Images/Master Thin Gold.png";
+// import RolexSubmarinerBlue from "../Images/Rolex Submariner Blue.png";
+// import RolexVintageSeaDweller from "../Images/Rolex Sea-Dweller Vintage.png"
+// import IWCChronoPilot from "../Images/IWC Chrono Pilot.png";
+// import OmegaSeamaster from "../Images/Omega Seamaster.png";
 import { v4 as uuidv4 } from "uuid";
 
 type watches = {
