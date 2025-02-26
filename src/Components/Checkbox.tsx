@@ -7,7 +7,6 @@ type typeProps = {
 };
 
 const Checkbox = ({ isOpenListMenu, setIsopenListMenu }: typeProps) => {
-
   const location = useLocation();
   return (
     <StyledWrapper
@@ -36,7 +35,7 @@ const Checkbox = ({ isOpenListMenu, setIsopenListMenu }: typeProps) => {
   );
 };
 
-const StyledWrapper = styled.div<{ isOpenListMenu: boolean , location:any }>`
+const StyledWrapper = styled.div<{ isOpenListMenu: boolean; location: any }>`
   position: relative;
   z-index: 9999;
 
@@ -55,7 +54,13 @@ const StyledWrapper = styled.div<{ isOpenListMenu: boolean , location:any }>`
 
   .line {
     fill: none;
-    stroke: ${({ isOpenListMenu }) => (isOpenListMenu || location.pathname === "/craftmanship" || location.pathname.includes("/shop") ? "black" : "white")};
+    stroke: ${({ isOpenListMenu }) =>
+      isOpenListMenu ||
+      location.pathname === "/craftmanship" ||
+      location.pathname.includes("/shop") ||
+      location.pathname.includes("/Product")
+        ? "black"
+        : "white"};
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
