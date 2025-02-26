@@ -55,7 +55,7 @@ const StyledWrapper = styled.div<{ isOpenListMenu: boolean , location:any }>`
 
   .line {
     fill: none;
-    stroke: ${({ isOpenListMenu }) => (isOpenListMenu || location.pathname === "/craftmanship" ? "black" : "white")};
+    stroke: ${({ isOpenListMenu }) => (isOpenListMenu || location.pathname === "/craftmanship" || location.pathname.includes("/shop") ? "black" : "white")};
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;

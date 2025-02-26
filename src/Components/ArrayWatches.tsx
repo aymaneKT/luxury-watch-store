@@ -1,5 +1,3 @@
-import { createContext, useContext } from "react";
-import { v4 as uuidv4 } from "uuid";
 import moon from "../Images/Moon.webp";
 import masterThin from "../Images/Master Ultra Thin.webp";
 import masterThinsSecond from "../Images/Master Ultra Thin Small Seconds.webp";
@@ -12,6 +10,14 @@ import blueIwc from "../Images/blueIwcPilot's Watch.webp";
 import brownIwc from "../Images/BrownIwc.webp";
 import iwcCronoEdition from "../Images/IWCCronograph.webp";
 import IWCWatchMarkXX from "../Images/IWCWatchMarkXX.webp";
+import moonMasterpiece from "../Images/Moon Masterpiece.png";
+import MasterThinGold from "../Images/Master Thin Gold.png";
+import RolexSubmarinerBlue from "../Images/Rolex Submariner Blue.png";
+import RolexVintageSeaDweller from "../Images/Rolex Sea-Dweller Vintage.png"
+import IWCChronoPilot from "../Images/IWC Chrono Pilot.png";
+import OmegaSeamaster from "../Images/Omega Seamaster.png";
+import { v4 as uuidv4 } from "uuid";
+
 type watches = {
   id: string;
   title: string;
@@ -21,9 +27,10 @@ type watches = {
   description: string;
   price: number;
   quantity?: number;
+  forHomePage: boolean;
 }[];
 
-const Watches: watches = [
+export const Watches: watches = [
   {
     id: uuidv4(),
     image: moon,
@@ -39,6 +46,7 @@ const Watches: watches = [
     description:
       "A dress watch is the epitome of elegance—slim, sophisticated, and designed to complement formal attire.",
     price: 15000,
+    forHomePage: true,
   },
   {
     id: uuidv4(),
@@ -55,6 +63,7 @@ const Watches: watches = [
     description:
       "A dress watch is the epitome of elegance—slim, sophisticated, and designed to complement formal attire.",
     price: 12000,
+    forHomePage: true,
   },
   {
     id: uuidv4(),
@@ -71,6 +80,7 @@ const Watches: watches = [
     description:
       "A dress watch is the epitome of elegance—slim, sophisticated, and designed to complement formal attire.",
     price: 18000,
+    forHomePage: true,
   },
   {
     id: uuidv4(),
@@ -87,6 +97,7 @@ const Watches: watches = [
     description:
       "A dress watch is the epitome of elegance—slim, sophisticated, and designed to complement formal attire.",
     price: 25000,
+    forHomePage: true,
   },
   {
     id: uuidv4(),
@@ -103,6 +114,7 @@ const Watches: watches = [
     description:
       "Built for underwater adventures, a diver’s watch is rugged, water-resistant, and highly legible.",
     price: 36000,
+    forHomePage: true,
   },
   {
     id: uuidv4(),
@@ -119,6 +131,7 @@ const Watches: watches = [
     description:
       "Built for underwater adventures, a diver’s watch is rugged, water-resistant, and highly legible.",
     price: 14000,
+    forHomePage: true,
   },
   {
     id: uuidv4(),
@@ -135,6 +148,7 @@ const Watches: watches = [
     description:
       "Built for underwater adventures, a diver’s watch is rugged, water-resistant, and highly legible.",
     price: 12000,
+    forHomePage: true,
   },
   {
     id: uuidv4(),
@@ -151,6 +165,7 @@ const Watches: watches = [
     description:
       "Built for underwater adventures, a diver’s watch is rugged, water-resistant, and highly legible.",
     price: 22000,
+    forHomePage: true,
   },
   {
     id: uuidv4(),
@@ -167,6 +182,7 @@ const Watches: watches = [
     description:
       "Inspired by aviation, a pilot’s watch features a large, legible dial and practical complications like a GMT or chronograph.",
     price: 8000,
+    forHomePage: true,
   },
   {
     id: uuidv4(),
@@ -183,6 +199,7 @@ const Watches: watches = [
     description:
       "Inspired by aviation, a pilot’s watch features a large, legible dial and practical complications like a GMT or chronograph.",
     price: 7500,
+    forHomePage: true,
   },
   {
     id: uuidv4(),
@@ -199,6 +216,7 @@ const Watches: watches = [
     description:
       "Inspired by aviation, a pilot’s watch features a large, legible dial and practical complications like a GMT or chronograph.",
     price: 9500,
+    forHomePage: true,
   },
   {
     id: uuidv4(),
@@ -215,19 +233,106 @@ const Watches: watches = [
     description:
       "Inspired by aviation, a pilot’s watch features a large, legible dial and practical complications like a GMT or chronograph.",
     price: 7200,
+    forHomePage: true,
   },
+  // {
+  //   id: uuidv4(),
+  //   image: moonMasterpiece,
+  //   title: "moon Masterpiece",
+  //   type: "Dress Watch",
+  //   specs: [
+  //     "18K Yellow Gold Case.",
+  //     "W/ Black Opaline Dial.",
+  //     "& Alligator Leather Strap.",
+  //     "42mm x Ultra-Thin Profile.",
+  //     "Limited Edition of 300 Pieces.",
+  //   ],
+  //   description:
+  //     "A masterful dress watch that brings timeless elegance and craftsmanship.",
+  //   price: 18000,
+  //   forHomePage: false,
+  // },
+  // {
+  //   id: uuidv4(),
+  //   image: MasterThinGold,
+  //   title: "Master Thin Gold",
+  //   type: "Dress Watch",
+  //   specs: [
+  //     "18K Gold Case.",
+  //     "W/ Champagne Dial.",
+  //     "& Crocodile Leather Strap.",
+  //     "40mm x Ultra-Thin Design.",
+  //     "Limited Edition of 250 Pieces.",
+  //   ],
+  //   description: "A golden example of thin and sophisticated elegance.",
+  //   price: 21000,
+  //   forHomePage: false,
+  // },
+  // {
+  //   id: uuidv4(),
+  //   image: RolexSubmarinerBlue,
+  //   title: "Rolex Submariner Blue",
+  //   type: "Diver’s Watch",
+  //   specs: [
+  //     "Stainless Steel Case.",
+  //     "W/ Blue Dial & Ceramic Bezel.",
+  //     "& Oyster Bracelet.",
+  //     "41mm x 300m Water Resistance.",
+  //     "Limited Edition of 500 Pieces.",
+  //   ],
+  //   description: "An iconic diver’s watch, combining style and durability.",
+  //   price: 15000,
+  //   forHomePage: false,
+  // },
+  // {
+  //   id: uuidv4(),
+  //   image:RolexVintageSeaDweller,
+  //   title: "Rolex Sea-Dweller Vintage",
+  //   type: "Diver’s Watch",
+  //   specs: [
+  //     "Vintage Stainless Steel Case.",
+  //     "W/ Black Dial & Patina Markers.",
+  //     "& Steel Bracelet.",
+  //     "40mm x 1220m Water Resistance.",
+  //     "Limited Edition of 150 Pieces.",
+  //   ],
+  //   description:
+  //     "A vintage diver’s watch that captures the spirit of adventure.",
+  //   price: 25000,
+  //   forHomePage: false,
+  // },
+  // {
+  //   id: uuidv4(),
+  //   image: IWCChronoPilot,
+  //   title: "IWC Chrono Pilot",
+  //   type: "Pilot Watch",
+  //   specs: [
+  //     "Stainless Steel Case.",
+  //     "W/ Green Dial & Chronograph Function.",
+  //     "& Leather Strap.",
+  //     "44mm x 100m Water Resistance.",
+  //     "Limited Edition of 400 Pieces.",
+  //   ],
+  //   description:
+  //     "A functional and durable pilot’s watch for aviation enthusiasts.",
+  //   price: 9500,
+  //   forHomePage: false,
+  // },
+  // {
+  //   id: uuidv4(),
+  //   image:OmegaSeamaster,
+  //   title: "Omega Seamaster",
+  //   type: "Diver’s Watch",
+  //   specs: [
+  //     "Stainless Steel Case.",
+  //     "W/ Blue Dial & Rotating Bezel.",
+  //     "& Steel Bracelet.",
+  //     "42mm x 300m Water Resistance.",
+  //     "Limited Edition of 350 Pieces.",
+  //   ],
+  //   description:
+  //     "A legendary diver’s watch known for its ruggedness and style.",
+  //   price: 18000,
+  //   forHomePage: false,
+  // },
 ];
-
-export const HomePageProvider = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => (
-  <HomePageContext.Provider value={Watches}>
-    {children}
-  </HomePageContext.Provider>
-);
-
-const HomePageContext = createContext<watches>([]);
-
-export const useHomePageContext = () => useContext(HomePageContext);

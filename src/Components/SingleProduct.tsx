@@ -1,11 +1,11 @@
 import { useParams } from "react-router";
-import { useHomePageContext } from "../Context/HomePageContext";
+import { useProductContext } from "../Context/ProductContext";
 import { useCartContext } from "../Context/CartContext";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 
 export default function SingleProduct() {
   const { productId } = useParams();
-  const watches = useHomePageContext();
+  const watches = useProductContext();
   const { cart, setCart } = useCartContext();
   const mainProduct = watches.find((item) => item.id === productId);
 

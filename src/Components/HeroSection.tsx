@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import img from "../Images/picHero.webp";
 export default function HeroSection() {
   return (
@@ -18,9 +19,11 @@ export default function HeroSection() {
           Limited edition watches blend vintage soul with bold
           craftsmanship—rare, numbered, and timeless
         </p>
-        <h2 className="font-[700] my-2.5 cursor-pointer  hover:opacity-75 hover:text-[#edede9] transition duration-300 inline-block">
-          SHOP NOW
-        </h2>
+        <Link to="/Shop">
+          <h2 className="font-[700] my-2.5 cursor-pointer  hover:opacity-75 hover:text-[#edede9] transition duration-300 inline-block">
+            SHOP NOW
+          </h2>
+        </Link>
       </div>
     </div>
   );

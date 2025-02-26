@@ -7,7 +7,7 @@ import Craftmanship from "./Components/Craftmanship";
 import Footer from "./Components/Footer";
 import SingleProduct from "./Components/SingleProduct";
 import Shop from "./Components/Shop";
-import { HomePageProvider } from "./Context/HomePageContext";
+import { HomePageProvider } from "./Context/ProductContext";
 import { CartContextProvider } from "./Context/CartContext";
 
 function App() {
