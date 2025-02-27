@@ -7,14 +7,14 @@ import Craftmanship from "./Components/Craftmanship";
 import Footer from "./Components/Footer";
 import SingleProduct from "./Components/SingleProduct";
 import Shop from "./Components/Shop";
-import { HomePageProvider } from "./Context/ProductContext";
+import { ProductContextProvider } from "./Context/ProductContext";
 import { CartContextProvider } from "./Context/CartContext";
 
 function App() {
   return (
     <>
       <CartContextProvider>
-        <HomePageProvider>
+        <ProductContextProvider>
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -25,7 +25,7 @@ function App() {
             <Route path="/Craftmanship" element={<Craftmanship />} />
           </Routes>
           <Footer />
-        </HomePageProvider>
+        </ProductContextProvider>
       </CartContextProvider>
     </>
   );

@@ -12,7 +12,7 @@ type watches = {
   quantity?: number;
   forHomePage: boolean;
 }[];
-export const HomePageProvider = ({
+export const ProductContextProvider = ({
   children,
 }: {
   children: React.ReactNode;

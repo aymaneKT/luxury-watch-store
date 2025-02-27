@@ -47,7 +47,7 @@ export default function SingleProduct() {
   return (
     <>
       <ToastContainer />
-      <div className="border border-black mx-[3rem] flex max-[748px]:flex-col my-[5rem] rounded-[8px] max-[748px]:pb-5 max-[500px]:mx-[1rem]">
+      <div className="border border-black mx-[3rem] flex max-[748px]:flex-col my-[6rem] rounded-[8px] max-[748px]:pb-5 max-[500px]:mx-[1rem]">
         <img
           src={mainProduct.image}
           alt="test"

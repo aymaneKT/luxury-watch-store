@@ -3,14 +3,22 @@ import { Bounce, toast, ToastContainer } from "react-toastify";
 
 import { useCartContext } from "../Context/CartContext";
 import { Link } from "react-router";
+import { useEffect } from "react";
 
 type CartProps = {
   isOpenCartMenu: boolean;
   setIsOpenCartMenu: (value: boolean) => void;
 };
-
 export default function Cart(props: CartProps) {
   const { cart, setCart } = useCartContext();
+
+  useEffect(() => {
+    if (props.isOpenCartMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [props.isOpenCartMenu]);
 
   const cartMapped = cart.map((item) => (
     <div
@@ -30,9 +38,9 @@ export default function Cart(props: CartProps) {
               position: "bottom-left",
               autoClose: 2000,
               hideProgressBar: false,
-              closeOnClick: false,
+              closeOnClick: true,
               pauseOnHover: true,
-              draggable: true,
+              draggable: false,
               progress: undefined,
               theme: "light",
               transition: Bounce,
@@ -53,7 +61,7 @@ export default function Cart(props: CartProps) {
     <>
       <ToastContainer />
       <div
-        className="fixed top-0 h-screen right-0 bg-white w-[400px] z-50 px-[2rem] max-[700px]:w-full Z-1000000000000 border-l-1"
+        className="fixed top-0 h-screen right-0 bg-white w-[400px] z-500000 px-[2rem] max-[700px]:w-full  border-l-1"
         style={{
           right: props.isOpenCartMenu ? "0" : "-100%",
           transition: "all 500ms",
@@ -85,7 +93,7 @@ export default function Cart(props: CartProps) {
           )}{" "}
           €<span>CHECKOUT</span>
         </button>
-        <Link to="/Shop" onAbort={() => props.setIsOpenCartMenu(false)}>
+        <Link to="/shop" onClick={() => props.setIsOpenCartMenu(false)}>
           <button
             className="border-2 absolute w-[85%] top-17 border-[#000] p-2.5 uppercase font-[700] cursor-pointer hover:text-[#C0BFBF] hover:bg-black transition duration-200"
             style={{
